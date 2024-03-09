@@ -15,5 +15,9 @@
         return this.userService.findOne(id)
     }
 ```
-## 2. 
+## 2. DTO
+### B1: Create q folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules))
+### B2: Create a file `create-user.dto.ts`
+```bash
+```
 

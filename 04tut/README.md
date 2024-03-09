@@ -18,7 +18,7 @@
 ## 2. DTO Validation
 ### B1: Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
 ### B2: Create a file `create-user.dto.ts` in the folder `dto`
-[TECHNIQUES/Validation](https://docs.nestjs.com/techniques/validation)
+https://docs.nestjs.com/techniques/validation
 ```bash
 $ npm i class-validator class-transformer
 ```
@@ -41,6 +41,7 @@ export class CreateUserDto {
 }
 ```
 ### B3: Create a file `update-user.dto.ts` in the folder `dto`
+https://docs.nestjs.com/techniques/validation#mapped-types
 ```bash
 $ npm i @nestjs/mapped-types -D
 ```

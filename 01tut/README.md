@@ -1,6 +1,6 @@
 # setup
 
-(first-steps)[https://docs.nestjs.com/first-steps]
+[first-steps](https://docs.nestjs.com/first-steps)
 
 npm i -g @nestjs/cli
 

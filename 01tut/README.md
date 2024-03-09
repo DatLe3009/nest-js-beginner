@@ -24,8 +24,7 @@ $ nest g service users
 ```
 
 ## error: delete 'CR'
-### .eslintrc.js 
-
+`.eslintrc.js` 
 ```bash
 "prettier/prettier": [
       "error",
@@ -34,8 +33,7 @@ $ nest g service users
       }
     ]
 ```
-### .prettierrc
-
+`.prettierrc`
 ```bash
 "endOfline": "auto"
 ```

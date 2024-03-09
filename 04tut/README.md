@@ -1,6 +1,8 @@
 # 04: DTO Validation
 
-## 1: Create many functions for users.controller.ts in src/users/users.service.ts
+[Pipes](https://docs.nestjs.com/pipes)
+
+## 1. Use Pipes,  user.controller.ts
 
 ## 2: Change src/users/users.controller.ts
 

@@ -46,7 +46,7 @@ import { PartialType} from "@nestjs/mapped-types"
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {}
 ```
-## 5. Use `create-user.dto.ts`,  `update-user.dto.ts` and { ParseIntPipe, ValidationPipe } from '@nestjs/common'
+## 5. Use `create-user.dto.ts`,  `update-user.dto.ts` and { ParseIntPipe, ValidationPipe, NotFoundException } from '@nestjs/common'
 `user.controller.ts`
 ```bash
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, ParseIntPipe, ValidationPipe } from '@nestjs/common';

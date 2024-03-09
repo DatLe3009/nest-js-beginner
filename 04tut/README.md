@@ -18,7 +18,23 @@
 ## 2. DTO
 ### B1: Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
 ### B2: Create a file `create-user.dto.ts` in the folder `dto`
+`create-user.dto.ts`
 ```bash
+import { IsEmail, IsEnum, IsNotEmpty, IsString } from "class-validator";
+
+export class CreateUserDto {
+    @IsString()
+    @IsNotEmpty()
+    name: string;
+
+    @IsEmail()
+    email: string;
+
+    @IsEnum(["INTERN" , "ENGINEER" , "ADMIN"], {
+        message: 'valid role required'
+    })
+    role: "INTERN" | "ENGINEER" | "ADMIN";
+}
 ```
 ### B3: Create a file `update-user.dto.ts` in the folder `dto`
 ```bash

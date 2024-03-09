@@ -1,7 +1,8 @@
 # 02: Controllers
+
 1. [Controllers](https://docs.nestjs.com/controllers)
 
-## 1. Controller for users
+## 1. Write controller for users
 `users.controller.js`
 ```bash
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';

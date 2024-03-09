@@ -10,11 +10,11 @@ $ nest new project-name
 ## 2. Create [module](https://docs.nestjs.com/modules), [controller](https://docs.nestjs.com/controllers), [provider](https://docs.nestjs.com/providers) for users
 
 ```bash
-nest g module users
+$ nest g module users
 
-nest g controller users
+$ nest g controller users
 
-nest g service users
+$ nest g service users
 ```
 
 ## error: delete 'CR'

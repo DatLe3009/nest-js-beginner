@@ -1,7 +1,9 @@
-# 03: [Providers]()
+# 03: Providers
 
-## 1. users.service.ts
+1. [providers](https://docs.nestjs.com/provider)
 
+## 1. providers for ussers
+`users.service.ts`
 ```bash
 import { Injectable } from '@nestjs/common';
 
@@ -84,8 +86,8 @@ export class UsersService {
 }
 ```
 
-## 2. users.controller.ts
-
+## 2. adjust controller for users 
+`users.controller.ts`
 ```bash
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 import { UsersService } from './users.service';

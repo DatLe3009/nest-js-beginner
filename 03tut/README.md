@@ -1,6 +1,6 @@
 # 03: Providers
 
-1. [providers](https://docs.nestjs.com/provider)
+[providers](https://docs.nestjs.com/provider)
 
 ## 1. Write providers for users
 `users.service.ts`

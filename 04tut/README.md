@@ -7,6 +7,8 @@
 
 [Validation](https://docs.nestjs.com/techniques/validation)
 
+[exception-filters#built-in-http-exceptions](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)
+
 ## 1. Set up
 [techniques/validation](https://docs.nestjs.com/techniques/validation)
 ```bash

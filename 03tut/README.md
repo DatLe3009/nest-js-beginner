@@ -86,7 +86,7 @@ export class UsersService {
 }
 ```
 
-## 2. adjust controller for users 
+## 2. Adjust controller for users 
 `users.controller.ts`
 ```bash
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';

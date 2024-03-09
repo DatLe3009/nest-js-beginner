@@ -18,7 +18,7 @@ $ npm i class-validator class-transformer
 ```bash
 $ npm i @nestjs/mapped-types -D
 ```
-## 2. Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
+## 2. Create a folder `dto` in the folder `users`
 ## 3. Create a file `create-user.dto.ts` in the folder `dto`
 `create-user.dto.ts`
 ```bash

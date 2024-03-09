@@ -18,6 +18,10 @@
 ## 2. DTO
 ### B1: Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
 ### B2: Create a file `create-user.dto.ts` in the folder `dto`
+[TECHNIQUES/Validation](https://docs.nestjs.com/techniques/validation)
+```bash
+$ npm i class-validator class-transformer
+```
 `create-user.dto.ts`
 ```bash
 import { IsEmail, IsEnum, IsNotEmpty, IsString } from "class-validator";

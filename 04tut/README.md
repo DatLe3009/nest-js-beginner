@@ -20,4 +20,8 @@
 ### B2: Create a file `create-user.dto.ts` in the folder `dto`
 ```bash
 ```
+### B3: Create a file `update-user.dto.ts` in the folder `dto`
+```bash
+```
+
 

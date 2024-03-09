@@ -24,6 +24,7 @@
 ```bash
 $ npm i @nestjs/mapped-types
 ```
+`update-user.dto.ts`
 ```bash
 import { CreateUserDto } from "./create-user.dto"
 import { PartialType} from "@nestjs/mapped-types"

@@ -6,7 +6,7 @@ $ npm i -g @nestjs/cli
 $ nest new project-name
 ```
 
-## <span style="color:red">error: delete 'CR'</span>
+<span style="color:red">error: delete 'CR'</span>
 ### .eslintrc.js 
 
 ```bash

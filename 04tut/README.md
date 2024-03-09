@@ -1,6 +1,6 @@
 # 04: DTO Validation
 4.1. [Pipes](https://docs.nestjs.com/pipes)
-## 1. Use [Pipes](https://docs.nestjs.com/pipes):  user.controller.ts
+## 1. user.controller.ts : use ParseIntPipe (@nest/common)
 ```bash
  @Get(':id')
     findOne(@Param('id', ParseIntPipe) id: number) {

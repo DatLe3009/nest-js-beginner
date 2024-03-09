@@ -1,11 +1,11 @@
 # 01: Introduction
-1. [first-steps](https://docs.nestjs.com/first-steps)
+[first-steps](https://docs.nestjs.com/first-steps)
 
-2. [module](https://docs.nestjs.com/modules) 
+[module](https://docs.nestjs.com/modules) 
 
-3. [controller](https://docs.nestjs.com/controllers) 
+[controller](https://docs.nestjs.com/controllers) 
 
-4. [provider](https://docs.nestjs.com/providers)
+[provider](https://docs.nestjs.com/providers)
 
 ## 1. Set up
 ```bash

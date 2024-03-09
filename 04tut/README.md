@@ -1,5 +1,12 @@
 # 04: DTO Validation
-4.1. [Pipes](https://docs.nestjs.com/pipes)
+[Pipes](https://docs.nestjs.com/pipes)
+
+[example DTO](https://docs.nestjs.com/controllers#request-payloads)
+
+[position DTO](https://docs.nestjs.com/modules#feature-modules)
+
+[Validation](https://docs.nestjs.com/techniques/validation)
+
 ## 1. ParseIntPipe (@nest/common)
 `user.controller.ts`
 ```bash
@@ -8,5 +15,5 @@
         return this.userService.findOne(id)
     }
 ```
-## 2. [example DTO](https://docs.nestjs.com/controllers#request-payloads), [position DTO](https://docs.nestjs.com/modules#feature-modules)
+## 2. 
 

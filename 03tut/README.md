@@ -2,7 +2,7 @@
 
 1. [providers](https://docs.nestjs.com/provider)
 
-## 1. providers for users
+## 1. Write providers for users
 `users.service.ts`
 ```bash
 import { Injectable } from '@nestjs/common';

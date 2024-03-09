@@ -1,10 +1,10 @@
-# setup
+## [first-steps](https://docs.nestjs.com/first-steps)
 
-[first-steps](https://docs.nestjs.com/first-steps)
+```bash
+$ npm i -g @nestjs/cli
 
-npm i -g @nestjs/cli
-
-nest new project-name
+$ nest new project-name
+```
 
 ## fix error: delete 'CR'
 

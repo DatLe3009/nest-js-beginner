@@ -1,8 +1,8 @@
 # 02: Controllers
 
-/src/users/users.controller.js
+## 1. users.controller.js
 
-<pre><code>
+```bash
   @Get() // GET /users or /users?role=value
     findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
         return []
@@ -27,4 +27,4 @@
     delete(@Param('id') id:string) {
         return {id}
     }
-</code></pre>
+```

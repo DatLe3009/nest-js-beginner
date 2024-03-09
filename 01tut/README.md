@@ -1,4 +1,4 @@
-# [first-steps](https://docs.nestjs.com/first-steps)
+# [1. first-steps](https://docs.nestjs.com/first-steps)
 
 ```bash
 $ npm i -g @nestjs/cli
@@ -23,10 +23,11 @@ $ nest new project-name
 "endOfline": "auto"
 ```
 
-# Create module, controller, service for users
-
-nest g module users -> add controller, provider on module
+# Create [module](https://docs.nestjs.com/modules), [controller](https://docs.nestjs.com/controllers), [provider](https://docs.nestjs.com/providers) for users
+```bash
+nest g module users
 
 nest g controller users
 
 nest g service users
+```

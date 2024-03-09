@@ -22,6 +22,13 @@
 ```
 ### B3: Create a file `update-user.dto.ts` in the folder `dto`
 ```bash
+$ npm i @nestjs/mapped-types
+```
+```bash
+import { CreateUserDto } from "./create-user.dto"
+import { PartialType} from "@nestjs/mapped-types"
+
+export class UpdateUserDto extends PartialType(CreateUserDto) {}
 ```
 
 

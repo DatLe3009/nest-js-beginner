@@ -22,7 +22,7 @@
 ```
 ### B3: Create a file `update-user.dto.ts` in the folder `dto`
 ```bash
-$ npm i @nestjs/mapped-types
+$ npm i @nestjs/mapped-types -D
 ```
 `update-user.dto.ts`
 ```bash

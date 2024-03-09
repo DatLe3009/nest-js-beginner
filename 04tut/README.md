@@ -7,15 +7,7 @@
 
 [Validation](https://docs.nestjs.com/techniques/validation)
 
-## 1. ParseIntPipe (@nest/common)
-`user.controller.ts`
-```bash
- @Get(':id')
-    findOne(@Param('id', ParseIntPipe) id: number) {
-        return this.userService.findOne(id)
-    }
-```
-## 2. DTO Validation
+## 1. Set up
 [techniques/validation](https://docs.nestjs.com/techniques/validation)
 ```bash
 $ npm i class-validator class-transformer
@@ -24,8 +16,8 @@ $ npm i class-validator class-transformer
 ```bash
 $ npm i @nestjs/mapped-types -D
 ```
-### B1: Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
-### B2: Create a file `create-user.dto.ts` in the folder `dto`
+### 2. Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
+### 3. Create a file `create-user.dto.ts` in the folder `dto`
 `create-user.dto.ts`
 ```bash
 import { IsEmail, IsEnum, IsNotEmpty, IsString } from "class-validator";
@@ -44,7 +36,7 @@ export class CreateUserDto {
     role: "INTERN" | "ENGINEER" | "ADMIN";
 }
 ```
-### B3: Create a file `update-user.dto.ts` in the folder `dto`
+### 4. Create a file `update-user.dto.ts` in the folder `dto`
 `update-user.dto.ts`
 ```bash
 import { CreateUserDto } from "./create-user.dto"
@@ -52,7 +44,7 @@ import { PartialType} from "@nestjs/mapped-types"
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {}
 ```
-### B4: Use `create-user.dto.ts`,  `update-user.dto.ts` and { ParseIntPipe, ValidationPipe } from '@nestjs/common'
+### 5. Use `create-user.dto.ts`,  `update-user.dto.ts` and { ParseIntPipe, ValidationPipe } from '@nestjs/common'
 `user.controller.ts`
 ```bash
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query, ParseIntPipe, ValidationPipe } from '@nestjs/common';

@@ -1,11 +1,11 @@
 # 01: Introduction
-[first-steps](https://docs.nestjs.com/first-steps)
+1.[first-steps](https://docs.nestjs.com/first-steps)
 
-[module](https://docs.nestjs.com/modules) 
+2.[module](https://docs.nestjs.com/modules) 
 
-[controller](https://docs.nestjs.com/controllers) 
+3.[controller](https://docs.nestjs.com/controllers) 
 
-[provider](https://docs.nestjs.com/providers) for users
+4.[provider](https://docs.nestjs.com/providers)
 
 ## 1. Set up
 

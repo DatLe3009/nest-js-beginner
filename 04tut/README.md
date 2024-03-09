@@ -15,7 +15,7 @@
         return this.userService.findOne(id)
     }
 ```
-## 2. DTO
+## 2. DTO Validation
 ### B1: Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules)) in the folder `users`
 ### B2: Create a file `create-user.dto.ts` in the folder `dto`
 [TECHNIQUES/Validation](https://docs.nestjs.com/techniques/validation)

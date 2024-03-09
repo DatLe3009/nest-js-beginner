@@ -1,6 +1,8 @@
-# 02: [Controllers](https://docs.nestjs.com/controllers)
-## 1. users.controller.js
+# 02: Controllers
+1. [Controllers](https://docs.nestjs.com/controllers)
 
+## 1. Controller for users
+`users.controller.js`
 ```bash
 import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 
@@ -31,7 +33,5 @@ export class UsersController {
     delete(@Param('id') id:string) {
         return {id}
     }
-
-    
 }
 ```

@@ -1,6 +1,6 @@
 # 02: Controllers
 
-1. [Controllers](https://docs.nestjs.com/controllers)
+[Controllers](https://docs.nestjs.com/controllers)
 
 ## 1. Write controller for users
 `users.controller.js`

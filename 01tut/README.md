@@ -7,8 +7,21 @@ $ nest new project-name
 ```
 
 ## fix error: delete 'CR'
+### .eslintrc.js 
 
-watch .eslintrc.js .prettierrc
+```bash
+"prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "off"
+      }
+    ]
+```
+### .prettierrc
+
+```bash
+"endOfline": "auto"
+```
 
 # Create module, controller, service for users
 

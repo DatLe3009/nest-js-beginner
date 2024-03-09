@@ -1,11 +1,11 @@
 # 04: DTO Validation
 [pipes](https://docs.nestjs.com/pipes)
 
-[example DTO](https://docs.nestjs.com/controllers#request-payloads)
+[controllers#request-payloads](https://docs.nestjs.com/controllers#request-payloads): example DTO
 
-[position DTO](https://docs.nestjs.com/modules#feature-modules)
+[modules#feature-modules](https://docs.nestjs.com/modules#feature-modules): position DTO
 
-[Validation](https://docs.nestjs.com/techniques/validation)
+[techniques/validation](https://docs.nestjs.com/techniques/validation)
 
 [exception-filters#built-in-http-exceptions](https://docs.nestjs.com/exception-filters#built-in-http-exceptions)
 

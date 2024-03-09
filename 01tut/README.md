@@ -1,4 +1,5 @@
-# [1. first-steps](https://docs.nestjs.com/first-steps)
+# 01: Introduction
+## [1. first-steps](https://docs.nestjs.com/first-steps)
 
 ```bash
 $ npm i -g @nestjs/cli
@@ -6,7 +7,7 @@ $ npm i -g @nestjs/cli
 $ nest new project-name
 ```
 
-# 2. Create [module](https://docs.nestjs.com/modules), [controller](https://docs.nestjs.com/controllers), [provider](https://docs.nestjs.com/providers) for users
+## 2. Create [module](https://docs.nestjs.com/modules), [controller](https://docs.nestjs.com/controllers), [provider](https://docs.nestjs.com/providers) for users
 
 ```bash
 nest g module users

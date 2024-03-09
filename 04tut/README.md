@@ -8,5 +8,5 @@
         return this.userService.findOne(id)
     }
 ```
-## 2: [DTO](https://docs.nestjs.com/controllers#request-payloads)
+## 2. [DTO](https://docs.nestjs.com/controllers#request-payloads)
 

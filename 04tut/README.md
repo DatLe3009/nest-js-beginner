@@ -1,5 +1,5 @@
 # 04: DTO Validation
-[Pipes](https://docs.nestjs.com/pipes)
+[pipes](https://docs.nestjs.com/pipes)
 
 [example DTO](https://docs.nestjs.com/controllers#request-payloads)
 

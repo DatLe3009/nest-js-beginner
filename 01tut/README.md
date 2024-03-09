@@ -1,4 +1,4 @@
-## [first-steps](https://docs.nestjs.com/first-steps)
+# [first-steps](https://docs.nestjs.com/first-steps)
 
 ```bash
 $ npm i -g @nestjs/cli

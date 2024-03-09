@@ -31,5 +31,5 @@ import { PartialType} from "@nestjs/mapped-types"
 
 export class UpdateUserDto extends PartialType(CreateUserDto) {}
 ```
-
+### B4: Use `create-user.dto.ts` and `update-user.dto.ts`
 

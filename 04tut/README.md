@@ -17,7 +17,7 @@
 ```
 ## 2. DTO
 ### B1: Create a folder `dto` ([position DTO](https://docs.nestjs.com/modules#feature-modules))
-### B2: Create a file `create-user.dto.ts`
+### B2: Create a file `create-user.dto.ts` in the folder `dto`
 ```bash
 ```
 

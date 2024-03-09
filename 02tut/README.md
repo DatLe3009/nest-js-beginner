@@ -3,7 +3,7 @@
 ## 1. users.controller.js
 
 ```bash
-  @Get() // GET /users or /users?role=value
+    @Get() // GET /users or /users?role=value
     findAll(@Query('role') role?: 'INTERN' | 'ENGINEER' | 'ADMIN') {
         return []
     }

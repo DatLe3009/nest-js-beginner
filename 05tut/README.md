@@ -13,7 +13,7 @@
 
 - Because prisma is added to existing project and the project uses Nest(Typescript) vs PostgreSQL 
 
-=> [setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma) => add-to-existing-project => relational-databases-typescript-postgresql
+[setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma) => add-to-existing-project => relational-databases-typescript-postgresql
 ```bash
 $ npm i prisma -D
 

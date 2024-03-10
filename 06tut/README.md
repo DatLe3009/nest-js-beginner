@@ -4,7 +4,7 @@
 [faq/global-prefix](https://docs.nestjs.com/faq/global-prefix)
 
 [techniques/logger](https://docs.nestjs.com/techniques/logger)
-## 1. global-prefix, security `CORS`
+## 1. faq/global-prefix, security/CORS
 `main.ts`
 ```bash
 import { NestFactory, HttpAdapterHost } from '@nestjs/core';
@@ -23,7 +23,7 @@ async function bootstrap() {
 }
 bootstrap();
 ```
-## 2. security `Rate limiting`
+## 2. security/Rate limiting
 ```bash
 $ npm i @nestjs/throttler
 ```
@@ -105,4 +105,61 @@ export class EmployeesController {
     return this.employeesService.remove(+id);
   }
 }
+```
+## 3. techniques/logger
+Create module, service for my-logger
+```bash
+$ nest g module my-logger
+
+$ nest g service my-logger
+```
+`my-logger.service.ts`
+```bash
+import { Injectable, ConsoleLogger } from '@nestjs/common';
+import * as fs from 'fs';
+import { promises as fsPromises} from 'fs';
+import * as path from 'path';
+
+@Injectable()
+export class MyLoggerService extends ConsoleLogger{
+    async logToFile(entry) {
+        const formattedEntry = `${Intl.DateTimeFormat('en-US', {
+            dateStyle: 'short',
+            timeStyle: 'short',
+            timeZone: 'Asia/Ho_Chi_Minh'
+        }).format(new Date())}\t${entry}\n`
+
+        try {
+            if (!fs.existsSync(path.join(__dirname, '..', '..', 'logs'))) {
+                await fsPromises.mkdir(path.join(__dirname, '..', '..', 'logs'))
+            }
+            await fsPromises.appendFile(path.join(__dirname, '..', '..', 'logs','myLogFile.log'), formattedEntry)
+        } catch (err) {
+            if (err instanceof Error) console.error(err.message)
+        }
+    }
+
+    log(message: any, context?:string) {
+        const entry = `${context}\t${message}`;
+        this.logToFile(entry);
+        super.log(message, context);
+    }
+
+    error(message: any, stackOrContext?: string) {
+        const entry = `${stackOrContext}\t${message}`;
+        this.logToFile(entry);
+        super.error(message, stackOrContext);
+    }
+}
+```
+`my-logger.module.ts`
+```bash
+import { Module } from '@nestjs/common';
+import { MyLoggerService } from './my-logger.service';
+
+@Module({
+  providers: [MyLoggerService],
+  exports: [MyLoggerService]
+})
+export class MyLoggerModule {}
 ```

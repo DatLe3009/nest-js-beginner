@@ -8,5 +8,7 @@ Because prisma is added to existing project and the project uses Nest(Typescript
 
 => https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-typescript-postgresql)
 ```bash
-$ npm install prisma --save-dev
+$ npm i prisma -D
+
+$ npx prisma init
 ```

@@ -7,6 +7,10 @@
 
 [prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
 
+[Install and generate Prisma Client](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases/install-prisma-client-typescript-postgresql)
+
+[prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
+
 [prisma-migrate](https://www.prisma.io/docs/orm/prisma-migrate)
 ## 1. Setup-prisma
 - You should install the extension `Prisma`  for VS Code 
@@ -27,6 +31,7 @@ $ npx prisma init
 - Visit Dashboard -> Connection Details -> Change `Connection string` to `Prisma` -> Copy content in 2 files `Schema.prisma` and `.env` 
 
 ## 3. PRISMA SCHEMA/ Data model
+[prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
 `schema.prisma`
 ```bash
 generator client {
@@ -63,6 +68,7 @@ $ npm i @prisma/client
 $ npx prisma generate           // Installs the @prisma/client into the npm project if it is not already present.                
 ```
 ## 5. PRISMA MIGRATE
+[prisma-migrate](https://www.prisma.io/docs/orm/prisma-migrate)
 - Create the first migration
 ```bash
 $ npx prisma migrate dev --name init

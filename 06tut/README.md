@@ -5,9 +5,6 @@
 
 
 ## 1. global-prefix, security `CORS`
-```bash
-$ npm i @nestjs/throttler
-```
 `main.ts`
 ```bash
 import { NestFactory, HttpAdapterHost } from '@nestjs/core';
@@ -26,7 +23,10 @@ async function bootstrap() {
 }
 bootstrap();
 ```
-## 2. security `Rate limiting` 
+## 2. security `Rate limiting`
+```bash
+$ npm i @nestjs/throttler
+```
 `app.module.ts`
 ```bash
 import { Module } from '@nestjs/common';

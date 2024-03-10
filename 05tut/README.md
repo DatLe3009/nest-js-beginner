@@ -32,6 +32,7 @@ $ npx prisma init
 
 ## 3. PRISMA SCHEMA/ Data model
 [prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
+
 `schema.prisma`
 ```bash
 generator client {

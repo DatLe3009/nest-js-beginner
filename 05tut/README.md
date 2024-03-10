@@ -3,9 +3,9 @@
 
 [prisma](https://www.prisma.io/docs): Prisma is a powerful application development tool and ORM (Object-Relational Mapping)
 
-[setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma): set up prisma
+[setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma)
 
-[orm/prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model): Data model
+[prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
 ## 1. Setup-prisma
 - You should install the extension `Prisma`  for VS Code 
 
@@ -24,7 +24,7 @@ $ npx prisma init
 
 - Visit Dashboard -> Connection Details -> Change `Connection string` to `Prisma` -> Copy content in 2 files `Schema.prisma` and `.env` 
 
-## 3. Data model
+## 3. PRISMA SCHEMA/ Data model
 `schema.prisma`
 ```bash
 generator client {
@@ -51,3 +51,4 @@ enum Role {
   ADMIN
 }
 ```
+## 4. PRISMA MIGRATE

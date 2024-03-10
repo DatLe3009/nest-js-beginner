@@ -53,27 +53,27 @@ enum Role {
   ADMIN
 }
 ```
+### 4. Install and generate Prisma Client
 [Install and generate Prisma Client](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases/install-prisma-client-typescript-postgresql)
 
 [prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
 ```bash
 $ npm i @prisma/client          
 
-$ npx prisma generate           // run this command, default                   
+$ npx prisma generate           // Installs the @prisma/client into the npm project if it is not already present.                
 ```
-## 4. PRISMA MIGRATE
-### B1: Create the first migration
+## 5. PRISMA MIGRATE
+- Create the first migration
 ```bash
 $ npx prisma migrate dev --name init
 ```
-### B2: Change fields to your schema
-- Delete `@unique` of Employee.name
-### B3: Create the second migration
+- Change fields to your schema: Delete `@unique` of Employee.name
+- Create the second migration
 ```bash
 $ npx prisma migrate dev --name name_change 
 ```
 Your Prisma schema is once again in sync with your database schema, and your migration history contains two migrations
-## 5. Create module, service for database
+## 6. Create module, service for database
 ```bash
 $ nest g module database
 

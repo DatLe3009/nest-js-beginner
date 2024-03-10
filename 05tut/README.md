@@ -14,6 +14,8 @@
 [prisma-migrate](https://www.prisma.io/docs/orm/prisma-migrate)
 
 [lifecycle-events](https://docs.nestjs.com/fundamentals/lifecycle-events#lifecycle-events-1)
+
+[crud-generator](https://docs.nestjs.com/recipes/crud-generator)
 ## 1. Setup-prisma
 - You should install the extension `Prisma`  for VS Code 
 
@@ -61,7 +63,7 @@ enum Role {
   ADMIN
 }
 ```
-### 4. Install and generate Prisma Client
+## 4. Install and generate Prisma Client
 [Install and generate Prisma Client](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases/install-prisma-client-typescript-postgresql)
 
 [prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
@@ -113,4 +115,9 @@ export class DatabaseService extends PrismaClient implements OnModuleInit {
         await this.$connect()
     }
 }
+```
+## 7. Create `resource` for `employee`
+[crud-generator](https://docs.nestjs.com/recipes/crud-generator)
+```bash
+$ nest g resource employee
 ```

@@ -3,7 +3,7 @@
 
 [prisma](https://www.prisma.io/docs): Prisma is a powerful application development tool and ORM (Object-Relational Mapping)
 
-[prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
+[orm/prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
 ## 1. Setup-prisma
 You should install the extension `Prisma`  for VS Code 
 

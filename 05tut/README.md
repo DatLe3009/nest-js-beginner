@@ -5,7 +5,7 @@
 
 [setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma): set up prisma
 
-[orm/prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model):
+[orm/prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model): Data model
 ## 1. Setup-prisma
 - You should install the extension `Prisma`  for VS Code 
 
@@ -27,12 +27,6 @@ $ npx prisma init
 ## 3. Data model
 `schema.prisma`
 ```bash
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
   provider = "prisma-client-js"
 }

@@ -12,3 +12,10 @@ $ npm i prisma -D
 
 $ npx prisma init
 ```
+## 2. Connection `neon.tech`
+- Register a account on `neon.tech` and login.
+
+- Create databases and tables on the account.
+
+- Visit Dashboard/Connection Details -> Change `Connection string` -> `Prisma`
+

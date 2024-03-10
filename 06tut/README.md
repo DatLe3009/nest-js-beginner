@@ -4,6 +4,7 @@
 [global-prefix](https://docs.nestjs.com/faq/global-prefix)
 
 # 1. global-prefix
+`main.ts`
 ```bash
 import { NestFactory, HttpAdapterHost } from '@nestjs/core';
 import { AppModule } from './app.module';

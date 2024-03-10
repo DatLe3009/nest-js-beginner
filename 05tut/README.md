@@ -55,13 +55,14 @@ enum Role {
 ```
 ## 4. PRISMA MIGRATE
 ### B1
-[prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
 ```bash
 $ npx prisma migrate dev --name init
-
+```
+### B2 : [prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
+```bash
 $ npx prisma generate                            
 ```
-### B2
+### B3
 - Delete `@unique` of Employee.name
 ```bash
 $ npx prisma migrate 

@@ -53,9 +53,13 @@ enum Role {
   ADMIN
 }
 ```
+[Install and generate Prisma Client](https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases/install-prisma-client-typescript-postgresql)
+
 [prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
 ```bash
-$ npx prisma generate                            
+$ npm i @prisma/client          
+
+$ npx prisma generate           // run this command, default                   
 ```
 ## 4. PRISMA MIGRATE
 ### B1: Create the first migration

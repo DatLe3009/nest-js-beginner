@@ -7,6 +7,7 @@
 
 [provider](https://docs.nestjs.com/providers)
 
+[crud-generator](https://docs.nestjs.com/recipes/crud-generator)
 ## 1. Set up
 ```bash
 $ npm i -g @nestjs/cli
@@ -23,7 +24,7 @@ $ nest g controller [name]
 
 $ nest g service [name]
 ```
-Hint :[crud-generator](https://docs.nestjs.com/recipes/crud-generator)
+Hint: [crud-generator](https://docs.nestjs.com/recipes/crud-generator)
 ```bash
 $ nest g resource [name]
 ```

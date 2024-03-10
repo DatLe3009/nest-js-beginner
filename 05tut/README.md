@@ -40,7 +40,7 @@ datasource db {
 
 model Employee {
   id        Int      @id @default(autoincrement())
-  name      String
+  name      String   @unique   // will delete @unique 
   email     String   @unique
   role      Role
   createdAt DateTime @default(now())
@@ -54,6 +54,14 @@ enum Role {
 }
 ```
 ## 4. PRISMA MIGRATE
+### B1
+[prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
 ```bash
 $ npx prisma migrate dev --name init
+
+$ npx prisma generate                            
 ```
+### B2
+- Delete `@unique` of Employee.name
+```bash
+$ npx prisma migrate 

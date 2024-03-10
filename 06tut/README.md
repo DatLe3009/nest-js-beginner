@@ -1,9 +1,9 @@
 # 06: Essential Additions
 [security](https://docs.nestjs.com/security) -> CORS, Rate limiting
 
-[global-prefix](https://docs.nestjs.com/faq/global-prefix)
+[faq/global-prefix](https://docs.nestjs.com/faq/global-prefix)
 
-
+[techniques/logger](https://docs.nestjs.com/techniques/logger)
 ## 1. global-prefix, security `CORS`
 `main.ts`
 ```bash

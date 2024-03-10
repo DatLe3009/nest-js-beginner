@@ -41,7 +41,7 @@ import { MyLoggerModule } from './my-logger/my-logger.module';
     UsersModule, 
     DatabaseModule, 
     EmployeesModule,
-    ThrottlerModule.forRoot([{
+    ThrottlerModule.forRoot([{                                            /* rate limiting
       name: 'short',
       ttl: 1000,
       limit: 3,
@@ -49,8 +49,8 @@ import { MyLoggerModule } from './my-logger/my-logger.module';
       name: 'long',
       ttl: 60000,
       limit: 100,
-    }]),
-    MyLoggerModule
+    }]),                                                                     rate limiting */
+    MyLoggerModule                                                        
   ],
   controllers: [AppController],
   providers: [ AppService, {

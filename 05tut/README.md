@@ -69,3 +69,32 @@ $ npx prisma migrate dev --name init
 $ npx prisma migrate dev --name name_change 
 ```
 Your Prisma schema is once again in sync with your database schema, and your migration history contains two migrations
+## 5. Create module, service for database
+```bash
+$ nest g module database
+
+$ nest g service database
+```
+`database.module.ts`
+```bash
+import { Module } from '@nestjs/common';
+import { DatabaseService } from './database.service';
+
+@Module({
+  providers: [DatabaseService],
+  exports: [DatabaseService],
+})
+export class DatabaseModule {}
+```
+`database.service.ts`
+```bash
+import { Injectable, OnModuleInit } from '@nestjs/common'
+import { PrismaClient } from '@prisma/client'
+
+@Injectable()
+export class DatabaseService extends PrismaClient implements OnModuleInit {
+    async onModuleInit() {
+        await this.$connect()
+    }
+}
+```

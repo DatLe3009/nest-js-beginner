@@ -6,6 +6,8 @@
 [setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma)
 
 [prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model)
+
+[prisma-migrate](https://www.prisma.io/docs/orm/prisma-migrate)
 ## 1. Setup-prisma
 - You should install the extension `Prisma`  for VS Code 
 

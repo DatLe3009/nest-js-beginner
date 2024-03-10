@@ -12,6 +12,8 @@
 [prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
 
 [prisma-migrate](https://www.prisma.io/docs/orm/prisma-migrate)
+
+[lifecycle-events](https://docs.nestjs.com/fundamentals/lifecycle-events#lifecycle-events-1)
 ## 1. Setup-prisma
 - You should install the extension `Prisma`  for VS Code 
 
@@ -81,6 +83,9 @@ $ npx prisma migrate dev --name name_change
 ```
 Your Prisma schema is once again in sync with your database schema, and your migration history contains two migrations
 ## 6. Create module, service for database
+[lifecycle-events](https://docs.nestjs.com/fundamentals/lifecycle-events#lifecycle-events-1) 
+
+-> onModuleInit(): Called once the host module's dependencies have been resolved.
 ```bash
 $ nest g module database
 

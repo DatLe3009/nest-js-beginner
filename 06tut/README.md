@@ -5,6 +5,9 @@
 
 
 ## 1. global-prefix, security `CORS`
+```bash
+$ npm i @nestjs/throttler
+```
 `main.ts`
 ```bash
 import { NestFactory, HttpAdapterHost } from '@nestjs/core';

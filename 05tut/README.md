@@ -17,5 +17,5 @@ $ npx prisma init
 
 - Create databases and tables on the account.
 
-- Visit Dashboard/Connection Details -> Change `Connection string` -> `Prisma`
+- Visit Dashboard -> Connection Details -> Change `Connection string` -> `Prisma`
 

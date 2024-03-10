@@ -37,7 +37,7 @@ import { DatabaseModule } from './database/database.module';
 import { EmployeesModule } from './employees/employees.module';
 import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';      // rate limiting
 import { APP_GUARD } from '@nestjs/core';                                 // rate limiting
-import { MyLoggerModule } from './my-logger/my-logger.module';
+import { MyLoggerModule } from './my-logger/my-logger.module';            // logger
 
 @Module({
   imports: [
@@ -53,10 +53,10 @@ import { MyLoggerModule } from './my-logger/my-logger.module';
       ttl: 60000,
       limit: 100,
     }]),                                                                     rate limiting */
-    MyLoggerModule                                                        
+    MyLoggerModule                                                         // logger
   ],
   controllers: [AppController],
-  providers: [ AppService, {
+  providers: [ AppService, { 
     provide: APP_GUARD,                                                    // rate limiting
     useClass: ThrottlerGuard,                                              // rate limiting
   }],
@@ -69,7 +69,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Query, Ip } from '@n
 import { EmployeesService } from './employees.service';
 import { Prisma, Role } from '@prisma/client';
 import { Throttle, SkipThrottle } from '@nestjs/throttler';                // rate limiting
-import { MyLoggerService } from 'src/my-logger/my-logger.service';
+import { MyLoggerService } from 'src/my-logger/my-logger.service';         // logger
 
 @SkipThrottle()                                                            // rate limiting
 @Controller('employees')
@@ -85,7 +85,7 @@ export class EmployeesController {
   @SkipThrottle({default: false})                                          // rate limiting
   @Get()
   findAll(@Ip() ip:string, @Query('role') role?: Role) {
-    this.logger.log(`Request for ALL Employees\t${ip}`, EmployeesController.name);
+    this.logger.log(`Request for ALL Employees\t${ip}`, EmployeesController.name);      // logger
     return this.employeesService.findAll(role);
   }
 

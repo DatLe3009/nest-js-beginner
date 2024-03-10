@@ -4,18 +4,20 @@
 [faq/global-prefix](https://docs.nestjs.com/faq/global-prefix)
 
 [techniques/logger](https://docs.nestjs.com/techniques/logger)
+
+[exception-filters](https://docs.nestjs.com/exception-filters)
 ## 1. faq/global-prefix, security/CORS
 `main.ts`
 ```bash
 import { NestFactory, HttpAdapterHost } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { AllExceptionFilter } from './all.exceptions.filter';
+import { AllExceptionFilter } from './all.exceptions.filter';      // exceptions.filter
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  const { httpAdapter} = app.get(HttpAdapterHost);
-  app.useGlobalFilters(new AllExceptionFilter(httpAdapter));
+  const { httpAdapter} = app.get(HttpAdapterHost);                 // exceptions.filter
+  app.useGlobalFilters(new AllExceptionFilter(httpAdapter));       // exceptions.filter
 
   app.enableCors();                                                // cors
   app.setGlobalPrefix('api');                                      // global-prefix
@@ -162,4 +164,58 @@ import { MyLoggerService } from './my-logger.service';
   exports: [MyLoggerService]
 })
 export class MyLoggerModule {}
+```
+## 4. Exception-filters
+Create new file `all.exception-filters.ts` in /src
+`all.exception-filters.ts`
+```bash
+import { Catch, ArgumentsHost, HttpStatus, HttpException } from "@nestjs/common";
+import { BaseExceptionFilter } from "@nestjs/core";
+import { Request, Response } from "express";
+import { MyLoggerService } from "./my-logger/my-logger.service";
+import { PrismaClientValidationError } from "@prisma/client/runtime/library";
+
+type MyResponseObj = {
+    statusCode: number,
+    timestamp: string,
+    path: string,
+    response: string | object,
+}
+
+@Catch()
+export class AllExceptionFilter extends BaseExceptionFilter {
+    private readonly logger = new MyLoggerService(AllExceptionFilter.name);
+
+    catch(exception: unknown, host: ArgumentsHost) {
+        const ctx  = host.switchToHttp();
+        const response = ctx.getResponse<Response>();
+        const request = ctx.getRequest<Request>();
+
+        const myResponseObj: MyResponseObj = {
+            statusCode: 500,
+            timestamp: new Date().toISOString(),
+            path: request.url,
+            response: '',
+        }
+
+        if (exception instanceof HttpException) {
+            myResponseObj.statusCode = exception.getStatus()
+            myResponseObj.response = exception.getResponse()
+        } else if (exception instanceof PrismaClientValidationError) {
+            myResponseObj.statusCode = 422
+            myResponseObj.response = exception.message.replace(/\n/g,'')
+        } else {
+            myResponseObj.statusCode = HttpStatus.INTERNAL_SERVER_ERROR
+            myResponseObj.response = 'Internal Server Error'
+        }
+
+        response
+            .status(myResponseObj.statusCode)
+            .json(myResponseObj)
+
+        this.logger.error(myResponseObj.response, AllExceptionFilter.name)
+
+        super.catch(exception, host)
+    }
+}
 ```

@@ -4,7 +4,7 @@
 [prisma](https://www.prisma.io/docs): Prisma is a powerful application development tool and ORM (Object-Relational Mapping)
 
 ## 1. Setup-prisma
-You should install extensions `Prisma`  for VS Code 
+You should install the extension `Prisma`  for VS Code 
 
 Because prisma is added to existing project and the project uses Nest(Typescript) vs PostgreSQL 
 

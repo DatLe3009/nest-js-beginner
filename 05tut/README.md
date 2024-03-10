@@ -3,8 +3,8 @@
 
 [prisma](https://www.prisma.io/docs): Prisma is a powerful application development tool and ORM (Object-Relational Mapping)
 
-## 1. Set up
-Because the app uses Nest(Typescript) vs PostgreSQL 
+## 1. Setup-prisma
+Because prisma is added to existing project and the project uses Nest(Typescript) vs PostgreSQL 
 
 => https://www.prisma.io/docs/getting-started/setup-prisma/add-to-existing-project/relational-databases-typescript-postgresql)
 ```bash

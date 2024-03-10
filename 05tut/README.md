@@ -54,3 +54,6 @@ enum Role {
 }
 ```
 ## 4. PRISMA MIGRATE
+```bash
+$ npx prisma migrate dev --name init
+```

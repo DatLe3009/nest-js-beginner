@@ -62,7 +62,7 @@ $ npx prisma migrate dev --name init
 ```bash
 $ npx prisma generate                            
 ```
-### B3
-- Delete `@unique` of Employee.name
+### B3 : Delete `@unique` of Employee.name and migrate again, aim to watch the change of `migration.sql`
 ```bash
-$ npx prisma migrate 
+$ npx prisma migrate dev --name name_change 
+```

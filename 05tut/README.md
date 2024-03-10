@@ -53,14 +53,14 @@ enum Role {
   ADMIN
 }
 ```
+[prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
+```bash
+$ npx prisma generate                            
+```
 ## 4. PRISMA MIGRATE
 ### B1: Create the first migration
 ```bash
 $ npx prisma migrate dev --name init
-```
-[prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
-```bash
-$ npx prisma generate                            
 ```
 ### B2: Change fields to your schema
 - Delete `@unique` of Employee.name

@@ -7,9 +7,9 @@
 
 [orm/prisma-schema/data-model](https://www.prisma.io/docs/orm/prisma-schema/data-model):
 ## 1. Setup-prisma
-You should install the extension `Prisma`  for VS Code 
+- You should install the extension `Prisma`  for VS Code 
 
-Because prisma is added to existing project and the project uses Nest(Typescript) vs PostgreSQL 
+- Because prisma is added to existing project and the project uses Nest(Typescript) vs PostgreSQL 
 
 => [setup-prisma](https://www.prisma.io/docs/getting-started/setup-prisma) => add-to-existing-project => relational-databases-typescript-postgresql
 ```bash

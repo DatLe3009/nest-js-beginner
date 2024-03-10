@@ -54,15 +54,18 @@ enum Role {
 }
 ```
 ## 4. PRISMA MIGRATE
-### B1
+### B1: Create the first migration
 ```bash
 $ npx prisma migrate dev --name init
 ```
-### B2 : [prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
+[prisma-cli-reference#generate](https://www.prisma.io/docs/orm/reference/prisma-cli-reference#generate)
 ```bash
 $ npx prisma generate                            
 ```
-### B3 : Delete `@unique` of Employee.name and migrate again, aim to watch the change of `migration.sql`
+### B2: Change fields to your schema
+- Delete `@unique` of Employee.name
+### B3: Create the second migration
 ```bash
 $ npx prisma migrate dev --name name_change 
 ```
+Your Prisma schema is once again in sync with your database schema, and your migration history contains two migrations

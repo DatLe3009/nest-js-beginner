@@ -15,14 +15,18 @@ $ nest new project-name
 ```
 
 ## 2. Create module, controller, provider for users
+[name] = users
 ```bash
-$ nest g module users
+$ nest g module [name]
 
-$ nest g controller users
+$ nest g controller [name]
 
-$ nest g service users
+$ nest g service [name]
 ```
-
+Hint :[crud-generator](https://docs.nestjs.com/recipes/crud-generator)
+```bash
+$ nest g resource [name]
+```
 ## error: delete 'CR'
 `.eslintrc.js` 
 ```bash
@@ -37,4 +41,3 @@ $ nest g service users
 ```bash
 "endOfline": "auto"
 ```
-

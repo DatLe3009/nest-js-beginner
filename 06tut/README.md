@@ -166,7 +166,8 @@ import { MyLoggerService } from './my-logger.service';
 export class MyLoggerModule {}
 ```
 ## 4. Exception-filters
-Create new file `all.exception-filters.ts` in /src
+Create new file `all.exception-filters.ts` in /src and import it on `main.ts`
+
 `all.exception-filters.ts`
 ```bash
 import { Catch, ArgumentsHost, HttpStatus, HttpException } from "@nestjs/common";

@@ -220,3 +220,35 @@ export class AllExceptionFilter extends BaseExceptionFilter {
     }
 }
 ```
+## error testcase
+### error 1: Cannot find module 'src/database/database.service' from 'employees/employees.service.ts'
+### error 2:  Nest can't resolve dependencies of the UsersController (?). Please make sure that the argument UsersService at index [0] is available in the RootTestModule context.
+`employees.controller.spec.ts`
+```bash
+import { Test, TestingModule } from '@nestjs/testing';
+import { EmployeesController } from './employees.controller';
+import { EmployeesService } from './employees.service';
+import { DatabaseModule } from '../database/database.module';      // add to fix error, changing To Relative Imports
+
+describe('EmployeesController', () => {
+  let controller: EmployeesController;
+  let service: EmployeesService;
+
+  beforeEach(async () => {
+    const module: TestingModule = await Test.createTestingModule({
+      imports: [DatabaseModule],                                    // / add to fix error
+      controllers: [EmployeesController],
+      providers: [EmployeesService],
+    }).compile();
+
+    controller = module.get<EmployeesController>(EmployeesController);
+    service = module.get<EmployeesService>(EmployeesService);
+  });
+
+  it('should be defined', () => {
+    expect(controller).toBeDefined();
+  });
+});
+
+```
+
